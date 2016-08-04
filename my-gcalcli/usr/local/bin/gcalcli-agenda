@@ -1,0 +1,6 @@
+#!/bin/bash
+
+CALENDAR=${DEFAULT_CALENDAR:-"undefined"}
+STAMP=$(date -d "${1:-5} days ago")
+
+gcalcli --calendar $CALENDAR agenda "$STAMP" "$(date)"
