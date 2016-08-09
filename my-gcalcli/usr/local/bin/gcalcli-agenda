@@ -1,6 +1,7 @@
 #!/bin/bash
 
 CALENDAR=${DEFAULT_CALENDAR:-"undefined"}
-STAMP=$(date -d "${1:-5} days ago")
+STAMP=$(date -d "-${1:-5} days")
+FUTURE_STAMP=$(date -d "+${1:-5} days")
 
-gcalcli --calendar $CALENDAR agenda "$STAMP" "$(date)"
+gcalcli agenda "$STAMP" "$FUTURE_STAMP"
