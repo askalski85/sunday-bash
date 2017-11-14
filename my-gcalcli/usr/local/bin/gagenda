@@ -4,4 +4,4 @@ CALENDAR=${DEFAULT_CALENDAR:-"undefined"}
 STAMP=$(date -d "-${1:-5} days")
 FUTURE_STAMP=$(date -d "+${1:-5} days")
 
-gcalcli agenda "$STAMP" "$FUTURE_STAMP"
+gcalcli --calendar $CALENDAR agenda "$STAMP" "$FUTURE_STAMP"

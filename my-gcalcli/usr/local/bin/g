@@ -1,5 +1,4 @@
 #!/bin/bash
 
 CALENDAR=${DEFAULT_CALENDAR:-"undefined"}
-
-gcalcli quick --calendar "$CALENDAR" "$*"
+gcalcli --calendar $CALENDAR quick "$*"
