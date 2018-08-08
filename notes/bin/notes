@@ -1,0 +1,16 @@
+#!/bin/bash +x
+
+echo "Using notes repository in PEWUDE"
+
+NOTES_DIR=PEWUDE
+
+if [[ $# -ne 1 ]] ; then
+  echo "Please provide a valid commit message, like ['notes \"with nice single string commit message\"']"
+  exit 1
+fi
+
+pushd $NOTES_DIR
+git add --all
+git commit -a -m"$@"
+git push origin master
+popd
