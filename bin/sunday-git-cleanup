@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
 # From https://medium.com/@FlorentDestrema/a-simple-way-to-clean-up-your-git-project-branches-283b87478fbc
-git branch -d $(git branch --merged=master | grep -v master)
+if [[ $(git branch --merged=master | grep  -v master) ]] ; then
+  git branch -d $(git branch --merged=master | grep -v master)
+fi
 git fetch --prune
