@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
 DAYS=${1:-5}
 FUTURE_DAYS=${2:-${DAYS}}
 CALENDAR=${DEFAULT_CALENDAR:-"undefined"}

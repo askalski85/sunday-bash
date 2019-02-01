@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+SEARCH=${1}
+CALENDAR=${CALENDAR:-${DEFAULT_CALENDAR}}
+gcalcli --calendar $CALENDAR search "$SEARCH"
