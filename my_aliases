@@ -1,0 +1,7 @@
+# Docker related
+alias docker-run='docker run -v $(pwd):$(pwd) -w $(pwd) --rm -it'
+alias docker-wrun='docker run -v $(pwd):$(pwd):rw -w $(pwd) --rm -it'
+alias gsign='git commit --amend --sign --no-edit'
+
+# todo
+# add docker in docker
