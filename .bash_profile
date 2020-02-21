@@ -17,5 +17,10 @@ function save_commands() {
   awk '{$1=$1};1' .htmp | grep -ve "^[ ]*[vim|ls|tree|ps|whereis|git|cd|cat|brew]" | grep -ve "help" | grep -ve "version" | sort | uniq > ${commands_file}
 }
 
+# Make profile sourcing easier
+function source_profile() {
+  source ~/.bash_profile
+}
+
 # Git prompt
 export PS1="\w\$(__git_ps1) \$ "
